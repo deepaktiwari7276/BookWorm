@@ -1,0 +1,139 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void bin(int a)
+{
+	if(a!=0)
+	{
+		bin(a/2);
+		cout<<a%2;
+	}
+}
+void ranged_prime(int a,int b)
+{
+	int x;
+	if(a>b)
+	{
+		cout<<"Invalid";
+		return;
+	}
+	for(int i=a;i<=b;i++)
+	{
+		x=0;
+		for(int j=2;j<i/2;j++)
+			if(i%j==0)
+				x=1;
+		if(i==1)
+			continue;
+		if(x==0)
+			cout<<i<<",";
+	}
+}
+int hcf(int a,int b)
+{
+	int x;
+	for(int i=1;i<=a || i<=b;i++)
+	{
+		if(a%i==0 && b%i==0)
+			x=i;
+	}
+	return x;
+}
+void fib(int a)
+{
+	static int x=0,y=1;
+	int z;
+	if(a!=0)
+	{
+		cout<<x<<",";
+		z=x+y;
+		x=y;
+		y=z;
+		fib(--a);
+	}
+}
+int fact(int a)
+{
+	if(a<=1)
+		return 1;
+	return a*fact(a-1);
+}
+int main()
+{
+	int a,b;
+	//cout<<"Enter Number Of Elements : ";
+	//cin>>a;
+	//fib(a);
+
+	//cout<<"Enter Number Of Elements : ";
+	//cin>>a;
+	//cout<<fact(a);
+
+
+	//cout<<"Enter Numbers : ";
+	//cin>>a>>b;;
+	//cout<<hcf(a,b);
+
+	//cout<<"Enter Numbers : ";
+	//cin>>a>>b;
+	//ranged_prime(a,b);
+
+	//a=2;
+	//for(int i=1;i<4;i++)
+	//{
+	//	for(int j=4-i;j<4;)
+	//	{
+	//		int x=0;
+	//		for(int k=2;k<=a/2;k++)
+	//		{
+	//			if(a%k==0)
+	//			{
+	//				x=1;
+	//				break;
+	//			}
+	//		}
+	//		if(x==0)
+	//		{
+	//			cout<<a;
+	//			j++;
+	//		}	
+	//		a++;
+	//	}
+	//	cout<<endl;
+	//}
+
+	//int n1,n2;
+	//cout<<"Enter 2 Elements :"<<endl;
+	//cin>>a>>b;
+	//if(a<b)
+	//{
+	//	n1=b;
+	//	n2=a;
+	//}
+	//else
+	//{
+	//	n1=a;
+	//	n2=b;
+	//}
+	//for(int i=2;i<10;i++)
+	//{
+	//	cout<<"Enter Element :"<<endl;
+	//	cin>>a;
+	//	if(n1<=
+	//		a)
+	//	{
+	//		n2=n1;
+	//		n1=a;
+	//	}
+	//	else if(n2<=a)
+	//	{
+	//		n2=a;
+	//	}
+	//}
+	//cout<<"Highest : "<<n1<<", 2nd Highest : "<<n2;
+	_getch();
+	return 0;
+
+
+
+}
